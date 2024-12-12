@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import 'react-toastify/dist/ReactToastify.css';
 
-const apiUrl = import.meta.env.VITE_API_BASE_URL;
+//const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
 
 
