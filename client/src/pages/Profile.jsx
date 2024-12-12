@@ -13,7 +13,7 @@ const Profile = () => {
 
   useEffect(() => {
     const getUserFiles = async () => {
-      const result = await axios.get(`http://localhost:6969/notes/getFiles/${userId}`);
+      const result = await axios.get(`${import.meta.env.VITE_API_BASE_URL}/notes/getFiles/${userId}`);
       console.log(result.data);
       setUserFiles(result.data.data);
     };

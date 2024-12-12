@@ -7,7 +7,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
 import 'react-toastify/dist/ReactToastify.css';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 
 
@@ -34,7 +35,7 @@ const Login = () => {
     };
       
 
-      const result = await axios.post("http://localhost:6969/auth/login", user);
+      const result = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/auth/login`, user);
       if (result.data.status === "Error") {
         if (result.data.message === "User does not exist") {
           toast.error("User does not exist. Kindly sign up first.");

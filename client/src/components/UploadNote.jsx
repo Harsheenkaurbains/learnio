@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
 
 const UploadNote = () => {
 
@@ -29,7 +31,7 @@ const UploadNote = () => {
         formData.append("uploadedBy", userId);
 
       const result = await axios.post(
-        "http://localhost:6969/notes/upload",
+        `${import.meta.env.VITE_API_BASE_URL}/notes/upload`,
         formData,
         {
           headers: {
